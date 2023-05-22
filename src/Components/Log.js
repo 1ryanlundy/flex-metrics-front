@@ -4,6 +4,9 @@ function Log({ exercise }) {
   return (
     <tr>
       <td>
+        <p>{exercise.id}</p>
+      </td>
+      <td>
         <p>{exercise.exercise_name}</p>
       </td>
       <td>
