@@ -37,7 +37,6 @@ function Logs() {
 
     let log1 = separatedLogs[dateValues[0]];
     let log2 = separatedLogs[dateValues[1]];
-    let log3 = separatedLogs[dateValues[2]];
 
 
     function dateFormatter(date) {
@@ -50,12 +49,10 @@ function Logs() {
 
     let formattedDate1 = "";
     let formattedDate2 = "";
-    let formattedDate3 = "";
 
     if (!loading && logs.length > 0) {
         formattedDate1 = dateFormatter(dateValues[0]);
         formattedDate2 = dateFormatter(dateValues[1]);
-        formattedDate3 = dateFormatter(dateValues[2])
     }
 
 
@@ -95,6 +92,7 @@ function Logs() {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
+                            <th>Log Entry ID</th>
                             <th>Exercise</th>
                             <th>Description</th>
                             <th>Sets and Reps</th>
@@ -108,34 +106,6 @@ function Logs() {
                     </thead>
                     <tbody>
                         {log2 && log2.map((exercise) => {
-                            return <Log key={exercise.id} exercise={exercise} />
-                        })}
-                    </tbody>
-                </Table>
-            </section>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <section className="background-overlay1">
-                <h3>{formattedDate1}</h3>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>Exercise</th>
-                            <th>Description / Notes</th>
-                            <th>Sets and Reps</th>
-                            <th>Set1</th>
-                            <th>Set2</th>
-                            <th>Set3</th>
-                            <th>Set4</th>
-                            <th>Set5</th>
-                            <th>Set6</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {log3 && log3.map((exercise) => {
                             return <Log key={exercise.id} exercise={exercise} />
                         })}
                     </tbody>

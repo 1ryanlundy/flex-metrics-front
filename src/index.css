@@ -13,10 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+
 
 .main {
   margin-top: 80px;
@@ -84,4 +81,8 @@ table {
 
 td {
   text-align: center;
+}
+
+.spacer {
+  margin-right: 40px;
 }
